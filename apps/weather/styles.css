@@ -1,0 +1,40 @@
+/* Weather */
+.wx-root { background: linear-gradient(180deg, #4a90e2 0%, #67b8f0 50%, #a0d8f7 100%); color: white; padding: var(--space-4); }
+.wx-content { flex: 1; overflow-y: auto; }
+.wx-layout { display: flex; flex-direction: column; gap: var(--space-4); }
+.wx-current {
+    text-align: center;
+    padding: var(--space-6) 0;
+}
+.wx-emoji { font-size: 96px; line-height: 1; }
+.wx-temp { font-size: 72px; font-weight: 200; line-height: 1; margin: var(--space-2) 0; }
+.wx-cond { font-size: 18px; opacity: 0.95; }
+.wx-loc { font-size: 14px; opacity: 0.85; margin-top: 4px; }
+.wx-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-2);
+}
+.wx-detail {
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(10px);
+    padding: var(--space-3);
+    border-radius: var(--radius-md);
+    display: flex; flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+.wx-detail > span:first-child { font-size: 11px; opacity: 0.85; text-transform: uppercase; letter-spacing: 0.05em; }
+.wx-detail > span:last-child { font-size: 18px; font-weight: 600; }
+.wx-forecast {
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(10px);
+    padding: var(--space-3);
+    border-radius: var(--radius-md);
+}
+.wx-forecast-title { font-size: 13px; font-weight: 600; margin-bottom: var(--space-3); }
+.wx-forecast-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: var(--space-2); }
+.wx-forecast-day { text-align: center; }
+.wx-forecast-name { font-size: 11px; opacity: 0.85; }
+.wx-forecast-emoji { font-size: 28px; margin: 4px 0; }
+.wx-forecast-temp { font-size: 11px; opacity: 0.9; }

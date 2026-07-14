@@ -1,0 +1,231 @@
+/* ============================================================
+   THEMES — applied via [data-theme] attribute on <body>.
+   Each theme overrides the variables defined in variables.css.
+   ============================================================ */
+
+/* ----- DARK (default) ----- */
+[data-theme="dark"] {
+    --bg-color: #0a0a0f;
+    --bg-elevated: rgba(28, 28, 36, 0.78);
+    --bg-elevated-solid: #1c1c24;
+    --bg-glass: rgba(28, 28, 36, 0.72);
+    --bg-hover: rgba(255, 255, 255, 0.06);
+    --bg-active: rgba(255, 255, 255, 0.10);
+    --bg-input: rgba(255, 255, 255, 0.05);
+    --text-color: #f3f4f6;
+    --text-secondary: #b4b4be;
+    --text-muted: #76767f;
+    --text-inverse: #0a0a0f;
+    --border-color: rgba(255, 255, 255, 0.08);
+    --border-strong: rgba(255, 255, 255, 0.16);
+    --scrollbar-thumb: rgba(255, 255, 255, 0.18);
+    --scrollbar-thumb-hover: rgba(255, 255, 255, 0.30);
+    --blur-strength: 24px;
+    --window-blur: 28px;
+    --backdrop: rgba(0, 0, 0, 0.55);
+    --titlebar-bg: rgba(255,255,255,0.03);
+    --wallpaper-overlay: transparent;
+}
+
+/* ----- LIGHT ----- */
+[data-theme="light"] {
+    --bg-color: #f5f5f7;
+    --bg-elevated: rgba(255, 255, 255, 0.82);
+    --bg-elevated-solid: #ffffff;
+    --bg-glass: rgba(255, 255, 255, 0.78);
+    --bg-hover: rgba(0, 0, 0, 0.04);
+    --bg-active: rgba(0, 0, 0, 0.08);
+    --bg-input: rgba(0, 0, 0, 0.04);
+    --text-color: #1a1a1f;
+    --text-secondary: #54545e;
+    --text-muted: #8a8a94;
+    --text-inverse: #ffffff;
+    --border-color: rgba(0, 0, 0, 0.08);
+    --border-strong: rgba(0, 0, 0, 0.16);
+    --scrollbar-thumb: rgba(0, 0, 0, 0.20);
+    --scrollbar-thumb-hover: rgba(0, 0, 0, 0.35);
+    --blur-strength: 24px;
+    --window-blur: 28px;
+    --backdrop: rgba(0, 0, 0, 0.25);
+    --titlebar-bg: rgba(0,0,0,0.02);
+    --wallpaper-overlay: transparent;
+}
+
+/* ----- AMOLED (true black) ----- */
+[data-theme="amoled"] {
+    --bg-color: #000000;
+    --bg-elevated: rgba(0, 0, 0, 0.85);
+    --bg-elevated-solid: #000000;
+    --bg-glass: rgba(0, 0, 0, 0.85);
+    --bg-hover: rgba(255, 255, 255, 0.04);
+    --bg-active: rgba(255, 255, 255, 0.08);
+    --bg-input: rgba(255, 255, 255, 0.04);
+    --text-color: #ffffff;
+    --text-secondary: #a8a8b3;
+    --text-muted: #5c5c66;
+    --text-inverse: #000000;
+    --border-color: rgba(255, 255, 255, 0.06);
+    --border-strong: rgba(255, 255, 255, 0.14);
+    --scrollbar-thumb: rgba(255, 255, 255, 0.14);
+    --scrollbar-thumb-hover: rgba(255, 255, 255, 0.24);
+    --blur-strength: 32px;
+    --window-blur: 36px;
+    --backdrop: rgba(0, 0, 0, 0.70);
+    --titlebar-bg: rgba(255,255,255,0.02);
+    --wallpaper-overlay: rgba(0,0,0,0.3);
+}
+
+/* ----- GLASSMORPHISM (frosted glass, vibrant bg) ----- */
+[data-theme="glassmorphism"] {
+    --bg-color: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --bg-elevated: rgba(255, 255, 255, 0.12);
+    --bg-elevated-solid: rgba(255, 255, 255, 0.20);
+    --bg-glass: rgba(255, 255, 255, 0.14);
+    --bg-hover: rgba(255, 255, 255, 0.18);
+    --bg-active: rgba(255, 255, 255, 0.25);
+    --bg-input: rgba(255, 255, 255, 0.10);
+    --text-color: #ffffff;
+    --text-secondary: rgba(255, 255, 255, 0.78);
+    --text-muted: rgba(255, 255, 255, 0.55);
+    --text-inverse: #1a1a2e;
+    --border-color: rgba(255, 255, 255, 0.18);
+    --border-strong: rgba(255, 255, 255, 0.32);
+    --scrollbar-thumb: rgba(255, 255, 255, 0.25);
+    --scrollbar-thumb-hover: rgba(255, 255, 255, 0.45);
+    --blur-strength: 40px;
+    --window-blur: 44px;
+    --backdrop: rgba(0, 0, 0, 0.30);
+    --titlebar-bg: rgba(255,255,255,0.08);
+    --wallpaper-overlay: rgba(0,0,0,0.2);
+    --shadow-md: 0 8px 32px rgba(0,0,0,0.18);
+    --shadow-lg: 0 16px 48px rgba(0,0,0,0.25);
+    --shadow-xl: 0 32px 80px rgba(0,0,0,0.35);
+}
+[data-theme="glassmorphism"] body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%) fixed;
+}
+
+/* ----- WINDOWS (Windows 11 inspired) ----- */
+[data-theme="windows"] {
+    --bg-color: #0078d4;
+    --bg-elevated: rgba(243, 243, 243, 0.92);
+    --bg-elevated-solid: #ffffff;
+    --bg-glass: rgba(243, 243, 243, 0.86);
+    --bg-hover: rgba(0, 0, 0, 0.04);
+    --bg-active: rgba(0, 0, 0, 0.08);
+    --bg-input: rgba(255, 255, 255, 0.85);
+    --text-color: #1a1a1a;
+    --text-secondary: #4a4a4a;
+    --text-muted: #767676;
+    --text-inverse: #ffffff;
+    --border-color: rgba(0, 0, 0, 0.08);
+    --border-strong: rgba(0, 0, 0, 0.16);
+    --scrollbar-thumb: rgba(0, 0, 0, 0.25);
+    --scrollbar-thumb-hover: rgba(0, 0, 0, 0.40);
+    --blur-strength: 30px;
+    --window-blur: 36px;
+    --backdrop: rgba(0, 0, 0, 0.20);
+    --titlebar-bg: rgba(255,255,255,0.5);
+    --wallpaper-overlay: rgba(0,30,60,0.1);
+    --shadow-md: 0 4px 16px rgba(0,0,0,0.12);
+    --shadow-lg: 0 16px 40px rgba(0,0,0,0.16);
+    --shadow-xl: 0 32px 80px rgba(0,0,0,0.25);
+    --radius-md: 8px;
+    --radius-lg: 12px;
+}
+[data-theme="windows"] body {
+    background: linear-gradient(135deg, #0078d4 0%, #005a9e 50%, #003a6b 100%) fixed;
+}
+[data-theme="windows"] .window { border-radius: 8px; }
+[data-theme="windows"] .taskbar { background: rgba(243,243,243,0.85); color: #1a1a1a; border-top: 1px solid rgba(0,0,0,0.08); }
+[data-theme="windows"] .taskbar-btn { color: #1a1a1a; }
+[data-theme="windows"] .taskbar-clock { color: #1a1a1a; }
+[data-theme="windows"] .taskbar-clock-date { color: #4a4a4a; }
+
+/* ----- MACOS ----- */
+[data-theme="macos"] {
+    --bg-color: #1e1e2e;
+    --bg-elevated: rgba(40, 40, 52, 0.78);
+    --bg-elevated-solid: #28282c;
+    --bg-glass: rgba(40, 40, 52, 0.72);
+    --bg-hover: rgba(255, 255, 255, 0.10);
+    --bg-active: rgba(255, 255, 255, 0.16);
+    --bg-input: rgba(255, 255, 255, 0.08);
+    --text-color: #f5f5f7;
+    --text-secondary: #c0c0c8;
+    --text-muted: #8a8a94;
+    --text-inverse: #ffffff;
+    --border-color: rgba(255, 255, 255, 0.10);
+    --border-strong: rgba(255, 255, 255, 0.20);
+    --scrollbar-thumb: rgba(255, 255, 255, 0.20);
+    --scrollbar-thumb-hover: rgba(255, 255, 255, 0.35);
+    --blur-strength: 32px;
+    --window-blur: 40px;
+    --backdrop: rgba(0, 0, 0, 0.40);
+    --titlebar-bg: rgba(255,255,255,0.05);
+    --wallpaper-overlay: rgba(0,0,0,0.15);
+    --radius-md: 10px;
+    --radius-lg: 14px;
+}
+[data-theme="macos"] body {
+    background: linear-gradient(135deg, #1e3a8a 0%, #6d28d9 50%, #be185d 100%) fixed;
+}
+[data-theme="macos"] .window { border-radius: 12px; }
+[data-theme="macos"] .window-header {
+    background: rgba(0,0,0,0.15);
+}
+[data-theme="macos"] .window-controls {
+    position: absolute; left: 12px; top: 50%; transform: translateY(-50%);
+}
+[data-theme="macos"] .window-icon { display: none; }
+[data-theme="macos"] .window-title { text-align: center; font-weight: 600; }
+[data-theme="macos"] .taskbar-app-label { display: none; }
+[data-theme="macos"] .taskbar {
+    background: rgba(40,40,52,0.55);
+}
+
+/* ----- LINUX (GNOME-inspired) ----- */
+[data-theme="linux"] {
+    --bg-color: #1d1d20;
+    --bg-elevated: rgba(36, 36, 40, 0.85);
+    --bg-elevated-solid: #242428;
+    --bg-glass: rgba(36, 36, 40, 0.80);
+    --bg-hover: rgba(255, 255, 255, 0.05);
+    --bg-active: rgba(255, 255, 255, 0.10);
+    --bg-input: rgba(255, 255, 255, 0.05);
+    --text-color: #ffffff;
+    --text-secondary: #c0c0c8;
+    --text-muted: #808088;
+    --text-inverse: #000000;
+    --border-color: rgba(255, 255, 255, 0.06);
+    --border-strong: rgba(255, 255, 255, 0.14);
+    --scrollbar-thumb: rgba(255, 255, 255, 0.18);
+    --scrollbar-thumb-hover: rgba(255, 255, 255, 0.32);
+    --blur-strength: 20px;
+    --window-blur: 24px;
+    --backdrop: rgba(0, 0, 0, 0.55);
+    --titlebar-bg: rgba(255,255,255,0.03);
+    --wallpaper-overlay: transparent;
+    --radius-md: 6px;
+    --radius-lg: 8px;
+}
+[data-theme="linux"] body {
+    background: #1d1d20;
+}
+[data-theme="linux"] .window { border-radius: 8px; border: 1px solid rgba(255,255,255,0.06); }
+[data-theme="linux"] .window-header { background: rgba(0,0,0,0.20); }
+[data-theme="linux"] .window-btn.close:hover { background: #c01c28; }
+[data-theme="linux"] .taskbar {
+    background: rgba(20,20,22,0.95);
+    border-top: none;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.4);
+}
+
+/* ----- High contrast / accessibility tweaks ----- */
+@media (prefers-contrast: more) {
+    :root, [data-theme] {
+        --border-color: var(--border-strong);
+    }
+}
+
+/* Reduced motion handled in animations.css */

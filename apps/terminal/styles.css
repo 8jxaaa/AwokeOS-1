@@ -1,0 +1,43 @@
+/* Terminal styles */
+.term-root {
+    background: #0a0a0a;
+    color: #e5e5e5;
+    font-family: var(--font-mono);
+    font-size: 13px;
+    line-height: 1.5;
+    padding: var(--space-3);
+    display: flex; flex-direction: column;
+    overflow: hidden;
+}
+.term-output {
+    flex: 1; overflow-y: auto;
+    user-select: text;
+    -webkit-user-select: text;
+    padding-bottom: var(--space-2);
+}
+.term-line { white-space: pre-wrap; word-break: break-word; }
+.term-line.term-error { color: #ff5555; }
+.term-line.term-cmd { color: #87d787; }
+.term-line.term-muted { color: #888; }
+.term-prompt { color: #6dcae8; }
+.term-banner {
+    color: #6dcae8;
+    font-size: 11px;
+    margin-bottom: 8px;
+}
+.term-input-row {
+    display: flex; align-items: center;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    padding-top: 8px;
+    gap: 6px;
+}
+.term-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: #e5e5e5;
+    font-family: var(--font-mono);
+    font-size: 13px;
+    caret-color: #6dcae8;
+}
+.term-ascii { color: #6dcae8; }

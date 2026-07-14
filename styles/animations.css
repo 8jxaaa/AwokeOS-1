@@ -1,0 +1,68 @@
+/* Reusable animations */
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes fadeOut { from { opacity: 1; } to { opacity: 0; } }
+@keyframes scaleIn { from { opacity: 0; transform: scale(0.94); } to { opacity: 1; transform: scale(1); } }
+@keyframes scaleOut { from { opacity: 1; transform: scale(1); } to { opacity: 0; transform: scale(0.94); } }
+@keyframes slideUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes slideDown { from { opacity: 0; transform: translateY(-16px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes slideLeft { from { opacity: 0; transform: translateX(16px); } to { opacity: 1; transform: translateX(0); } }
+@keyframes slideRight { from { opacity: 0; transform: translateX(-16px); } to { opacity: 1; transform: translateX(0); } }
+@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+@keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.55; } }
+@keyframes shimmer { 0% { background-position: -200% 0; } 100% { background-position: 200% 0; } }
+@keyframes bounceIn {
+    0%   { opacity: 0; transform: scale(0.3); }
+    50%  { opacity: 1; transform: scale(1.06); }
+    70%  { transform: scale(0.97); }
+    100% { transform: scale(1); }
+}
+@keyframes windowOpen {
+    from { opacity: 0; transform: scale(0.92) translateY(8px); }
+    to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+@keyframes windowClose {
+    from { opacity: 1; transform: scale(1) translateY(0); }
+    to   { opacity: 0; transform: scale(0.92) translateY(8px); }
+}
+@keyframes windowMinimize {
+    from { opacity: 1; transform: scale(1) translateY(0); }
+    to   { opacity: 0; transform: scale(0.35) translateY(45vh); }
+}
+@keyframes windowRestore {
+    from { opacity: 0; transform: scale(0.92) translateY(8px); }
+    to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+@keyframes fadeSlideUp {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeSlideDown {
+    from { opacity: 0; transform: translateY(-12px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@keyframes popIn {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
+@keyframes pulseRing {
+    0% { box-shadow: 0 0 0 0 rgba(255,255,255,0.2); }
+    70% { box-shadow: 0 0 0 10px rgba(255,255,255,0); }
+    100% { box-shadow: 0 0 0 0 rgba(255,255,255,0); }
+}
+@keyframes blink { 50% { opacity: 0; } }
+
+.anim-fade-in { animation: fadeIn var(--dur-med) var(--ease-out) both; }
+.anim-fade-out { animation: fadeOut var(--dur-med) var(--ease-in-out) both; }
+.anim-scale-in { animation: scaleIn var(--dur-med) var(--ease-spring) both; }
+.anim-slide-up { animation: slideUp var(--dur-med) var(--ease-out) both; }
+.anim-bounce-in { animation: bounceIn var(--dur-slow) var(--ease-spring) both; }
+.anim-spin { animation: spin 1s linear infinite; }
+.anim-pulse { animation: pulse 2s ease-in-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

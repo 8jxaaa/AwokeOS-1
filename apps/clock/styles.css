@@ -1,0 +1,34 @@
+/* Clock */
+.clock-root { background: var(--bg-elevated); display: flex; flex-direction: column; }
+.clock-layout { flex: 1; display: flex; overflow: hidden; }
+.clock-side { flex: 1; display: flex; flex-direction: column; padding: var(--space-3); overflow: hidden; }
+.clock-display { text-align: center; padding: var(--space-6) 0; }
+.clock-time-big { font-size: 64px; font-weight: 200; color: var(--text-color); letter-spacing: -0.02em; font-family: var(--font-mono); }
+.clock-date-big { font-size: 16px; color: var(--text-secondary); margin-top: 8px; }
+.clock-tabs {
+    display: flex;
+    background: var(--bg-input);
+    border-radius: var(--radius-md);
+    padding: 4px;
+    margin-bottom: var(--space-3);
+}
+.clock-tab {
+    flex: 1;
+    padding: 8px 12px;
+    background: transparent;
+    color: var(--text-secondary);
+    border-radius: var(--radius-sm);
+    font-size: 13px;
+    cursor: pointer;
+    transition: all var(--dur-fast) var(--ease-out);
+}
+.clock-tab.active { background: var(--accent); color: white; }
+.clock-tab:hover:not(.active) { background: var(--bg-hover); }
+.clock-content { flex: 1; display: flex; flex-direction: column; gap: var(--space-2); }
+.clock-city {
+    display: flex; align-items: center;
+    padding: var(--space-3);
+    background: var(--bg-input);
+    border-radius: var(--radius-md);
+}
+.clock-city-time { font-family: var(--font-mono); font-size: 18px; font-weight: 500; color: var(--accent); }

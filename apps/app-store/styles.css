@@ -1,0 +1,50 @@
+/* App Store */
+.store-root { background: var(--bg-elevated); }
+.store-scroll { flex: 1; padding: var(--space-4); overflow-y: auto; }
+.store-hero {
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    border-radius: var(--radius-lg);
+    padding: var(--space-6);
+    margin-bottom: var(--space-5);
+    color: white;
+    text-align: center;
+}
+.store-hero-title { font-size: 28px; font-weight: 700; margin-bottom: 8px; }
+.store-hero-sub { font-size: 14px; opacity: 0.9; }
+.store-section { margin-bottom: var(--space-5); }
+.store-section-title { font-size: 16px; font-weight: 600; margin-bottom: var(--space-3); color: var(--text-color); }
+.store-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: var(--space-3);
+}
+.store-card {
+    display: flex; flex-direction: column;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-3);
+    background: var(--bg-input);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    color: var(--text-color);
+    cursor: pointer;
+    transition: all var(--dur-fast) var(--ease-out);
+    text-align: center;
+}
+.store-card:hover { background: var(--bg-hover); transform: translateY(-2px); box-shadow: var(--shadow-md); }
+.store-card-icon {
+    width: 48px; height: 48px;
+    border-radius: var(--radius-md);
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    color: white;
+    display: flex; align-items: center; justify-content: center;
+}
+.store-card-icon svg { width: 24px; height: 24px; }
+.store-card-preview {
+    width: 80px; height: 60px;
+    border-radius: var(--radius-sm);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 24px;
+}
+.store-card-name { font-size: 13px; font-weight: 500; }
+.store-card-desc { font-size: 11px; color: var(--text-muted); }

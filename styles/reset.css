@@ -1,0 +1,39 @@
+/* CSS Reset — modern, minimal */
+*, *::before, *::after { box-sizing: border-box; }
+* { margin: 0; padding: 0; }
+html, body { height: 100%; width: 100%; overflow: hidden; }
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    line-height: 1.5;
+    font-family: var(--font-family);
+    font-size: var(--font-size-base);
+    color: var(--text-color);
+    background: var(--bg-color);
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    overscroll-behavior: none;
+    touch-action: manipulation;
+}
+img, picture, video, canvas, svg { display: block; max-width: 100%; }
+input, button, textarea, select { font: inherit; color: inherit; background: none; border: none; outline: none; }
+button { cursor: pointer; }
+button:disabled { cursor: not-allowed; opacity: 0.5; }
+a { color: var(--accent); text-decoration: none; }
+p, h1, h2, h3, h4, h5, h6 { overflow-wrap: break-word; }
+ul, ol { list-style: none; }
+[hidden] { display: none !important; }
+.hidden { display: none !important; }
+
+/* Allow text selection in inputs and contenteditable */
+input, textarea, [contenteditable="true"], .allow-select { user-select: text; -webkit-user-select: text; }
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--scrollbar-thumb); border-radius: 5px; border: 2px solid transparent; background-clip: padding-box; }
+::-webkit-scrollbar-thumb:hover { background: var(--scrollbar-thumb-hover); background-clip: padding-box; border: 2px solid transparent; }
+::-webkit-scrollbar-corner { background: transparent; }
+* { scrollbar-width: thin; scrollbar-color: var(--scrollbar-thumb) transparent; }

@@ -1,0 +1,90 @@
+/* Music Player */
+.mp-root {
+    background: linear-gradient(180deg, #1a1a2e 0%, #0a0a0f 100%);
+    color: white;
+    padding: var(--space-4);
+}
+.mp-layout { display: flex; flex-direction: column; gap: var(--space-4); height: 100%; }
+.mp-left { display: flex; flex-direction: column; gap: var(--space-4); flex: 1; overflow: hidden; }
+.mp-controls {
+    background: rgba(0,0,0,0.3);
+    border-radius: var(--radius-lg);
+    padding: var(--space-4);
+    display: flex; flex-direction: column; gap: var(--space-3);
+}
+.mp-info { display: flex; align-items: center; gap: var(--space-4); }
+.mp-art {
+    width: 80px; height: 80px;
+    border-radius: var(--radius-md);
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    box-shadow: var(--shadow-md);
+}
+.mp-art svg { width: 40px; height: 40px; color: white; }
+.mp-title { font-size: 18px; font-weight: 600; }
+.mp-artist { font-size: 13px; color: var(--text-secondary); margin-top: 2px; }
+.mp-progress-row {
+    display: flex; align-items: center; gap: var(--space-3);
+}
+.mp-time { font-size: 11px; color: var(--text-secondary); min-width: 40px; }
+.mp-progress-bar {
+    flex: 1;
+    height: 4px;
+    background: rgba(255,255,255,0.1);
+    border-radius: var(--radius-full);
+    cursor: pointer;
+    overflow: hidden;
+}
+.mp-progress-fill {
+    height: 100%;
+    background: var(--accent);
+    width: 0%;
+    border-radius: var(--radius-full);
+    transition: width 100ms linear;
+}
+.mp-buttons {
+    display: flex; align-items: center; justify-content: center;
+    gap: var(--space-3);
+}
+.mp-ctrl, .mp-play {
+    background: transparent;
+    color: white;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    transition: all var(--dur-fast) var(--ease-out);
+    cursor: pointer;
+}
+.mp-ctrl { width: 36px; height: 36px; }
+.mp-ctrl:hover { background: rgba(255,255,255,0.1); }
+.mp-ctrl.active { color: var(--accent); }
+.mp-play {
+    width: 56px; height: 56px;
+    background: var(--accent);
+    color: white;
+}
+.mp-play:hover { transform: scale(1.06); background: var(--accent); filter: brightness(1.1); }
+.mp-play svg { width: 24px; height: 24px; }
+.mp-ctrl svg { width: 18px; height: 18px; }
+.mp-volume-row { display: flex; align-items: center; gap: var(--space-2); }
+.mp-volume { flex: 1; }
+.mp-playlist {
+    flex: 1;
+    background: rgba(0,0,0,0.2);
+    border-radius: var(--radius-md);
+    padding: var(--space-2);
+    overflow-y: auto;
+}
+.mp-track {
+    display: flex; align-items: center; gap: var(--space-3);
+    padding: 8px 12px;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: background var(--dur-fast) var(--ease-out);
+}
+.mp-track:hover { background: rgba(255,255,255,0.06); }
+.mp-track.active { background: var(--accent-soft); color: var(--accent); }
+.mp-track-num { font-size: 12px; color: var(--text-muted); width: 20px; text-align: center; }
+.mp-track.active .mp-track-num { color: var(--accent); }
+.mp-track-name { font-size: 13px; font-weight: 500; }
+.mp-track-path { font-size: 10px; color: var(--text-muted); }

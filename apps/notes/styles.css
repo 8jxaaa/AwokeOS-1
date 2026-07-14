@@ -1,0 +1,59 @@
+/* Notes app */
+.notes-root { background: var(--bg-elevated); }
+.notes-layout { flex: 1; display: flex; overflow: hidden; }
+.notes-sidebar {
+    width: 240px; flex-shrink: 0;
+    background: var(--bg-input);
+    border-right: 1px solid var(--border-color);
+    padding: var(--space-3);
+    display: flex; flex-direction: column;
+    overflow: hidden;
+}
+.notes-list { flex: 1; display: flex; flex-direction: column; gap: 4px; }
+.notes-list-item {
+    padding: 10px 12px;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: background var(--dur-fast) var(--ease-out);
+}
+.notes-list-item:hover { background: var(--bg-hover); }
+.notes-list-item.active { background: var(--accent-soft); }
+.notes-list-title { font-size: 13px; font-weight: 500; color: var(--text-color); margin-bottom: 4px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.notes-list-preview { font-size: 11px; color: var(--text-muted); line-height: 1.4; max-height: 32px; overflow: hidden; margin-bottom: 4px; }
+.notes-list-date { font-size: 10px; color: var(--text-muted); }
+.notes-editor { flex: 1; padding: var(--space-3); overflow: hidden; }
+.notes-toolbar {
+    display: flex; gap: 4px;
+    padding-bottom: var(--space-2);
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: var(--space-2);
+}
+.notes-title {
+    font-size: 22px; font-weight: 600;
+    color: var(--text-color);
+    background: transparent;
+    border: none;
+    padding: var(--space-2) 0;
+    outline: none;
+}
+.notes-body {
+    flex: 1;
+    font-size: 14px;
+    line-height: 1.6;
+    background: transparent;
+    border: none;
+    color: var(--text-color);
+    resize: none;
+    outline: none;
+    padding: var(--space-2) 0;
+    font-family: var(--font-family);
+    min-height: 200px;
+}
+.notes-status {
+    height: 24px;
+    display: flex; align-items: center;
+    font-size: 11px;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    padding-top: 8px;
+}

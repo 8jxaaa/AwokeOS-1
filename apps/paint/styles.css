@@ -1,0 +1,52 @@
+/* Paint */
+.paint-root { background: var(--bg-elevated); display: flex; flex-direction: column; padding: 0; }
+.paint-toolbar {
+    height: 56px;
+    background: var(--bg-input);
+    border-bottom: 1px solid var(--border-color);
+    padding: 0 var(--space-3);
+    display: flex; align-items: center; gap: var(--space-2);
+    flex-shrink: 0;
+    overflow-x: auto;
+}
+.paint-tools { display: flex; gap: 2px; }
+.paint-tool {
+    width: 36px; height: 36px;
+    border-radius: var(--radius-sm);
+    background: transparent;
+    color: var(--text-color);
+    display: flex; align-items: center; justify-content: center;
+    transition: background var(--dur-fast) var(--ease-out);
+    cursor: pointer;
+}
+.paint-tool:hover { background: var(--bg-hover); }
+.paint-tool.active { background: var(--accent); color: white; }
+.paint-tool svg { width: 18px; height: 18px; }
+.paint-divider { width: 1px; height: 24px; background: var(--border-color); margin: 0 4px; }
+.paint-color-picker { width: 36px; height: 36px; border: none; cursor: pointer; border-radius: var(--radius-sm); padding: 2px; background: transparent; }
+.paint-presets { display: flex; gap: 4px; }
+.paint-preset {
+    width: 24px; height: 24px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: transform var(--dur-fast) var(--ease-out);
+}
+.paint-preset:hover { transform: scale(1.1); }
+.paint-size { width: 100px; }
+.paint-size-label { font-size: 11px; color: var(--text-muted); min-width: 36px; }
+.paint-canvas-wrap {
+    flex: 1;
+    overflow: auto;
+    display: flex; align-items: center; justify-content: center;
+    padding: var(--space-3);
+    background: var(--bg-color);
+}
+.paint-canvas {
+    background: white;
+    cursor: crosshair;
+    max-width: 100%; max-height: 100%;
+    box-shadow: var(--shadow-lg);
+    border-radius: 4px;
+    touch-action: none;
+}

@@ -1,0 +1,33 @@
+/* Task Manager */
+.tm-root { background: var(--bg-elevated); display: flex; flex-direction: column; }
+.tm-tabs {
+    display: flex;
+    background: var(--bg-input);
+    border-bottom: 1px solid var(--border-color);
+    padding: 0 var(--space-3);
+    flex-shrink: 0;
+}
+.tm-tab {
+    padding: 12px 20px;
+    background: transparent;
+    color: var(--text-secondary);
+    font-size: 13px;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    transition: all var(--dur-fast) var(--ease-out);
+}
+.tm-tab:hover { color: var(--text-color); }
+.tm-tab.active { color: var(--accent); border-bottom-color: var(--accent); }
+.tm-content { flex: 1; padding: var(--space-3); overflow-y: auto; }
+.tm-row {
+    display: flex; align-items: center; gap: var(--space-3);
+    padding: var(--space-3);
+    background: var(--bg-input);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--space-2);
+}
+.tm-metric {
+    padding: var(--space-3);
+    background: var(--bg-input);
+    border-radius: var(--radius-md);
+}
