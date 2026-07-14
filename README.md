@@ -1,6 +1,6 @@
 # AwokeOS v1
-
-A modern, fully browser-based operating system built with vanilla HTML, CSS, and JavaScript (ES Modules). Runs entirely in the browser — no backend required.
+> A refined version of (previous) ArchOS. 
+> A modern, fully browser-based operating system built with vanilla HTML, CSS, and JavaScript (ES Modules). Runs entirely in the browser — no backend required.
 
 ## Features
 
